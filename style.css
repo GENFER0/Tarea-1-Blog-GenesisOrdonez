@@ -1,4 +1,4 @@
-#titule{
+#titulo{
     font-style: bold;
     text-align: center;
     color:black;
@@ -9,8 +9,8 @@
   flex-wrap: wrap;
   gap: 15px;
   padding: 15px;
-  background-color: #ffd6e8;
-  border-bottom: 3px solid #ef9fc3;
+  background-color:#ffd6e8;
+  border-bottom: 5px solid #ef9fc3;
 }
 .buttoms {
   padding: 10px 20px;
@@ -19,5 +19,18 @@
   border: none;
   border-radius: 5px;
   cursor: pointer;
-  transition: background-color 0.3s ease;
+  font-style:oblique;
+  font-weight: 900;
 }
+.contenido {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  background-color: #ffd6e8;
+}
+.contenido2{
+    background-color:hotpink;
+    border-radius: 10px;
+    margin: 20px;
+}   
