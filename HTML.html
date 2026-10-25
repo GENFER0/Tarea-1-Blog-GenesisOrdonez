@@ -7,9 +7,9 @@
     </head>
     <body>
         <nav class="menu">
-            <a href="#inicio" class="buttoms">Inicio</a>
-            <a href="#gatitos" class="buttoms">Gatitos >< </a>
-            <a href="#contacto" class="buttoms">Contacto</a>
+            <a href="#inicio" class="buttoms">Inicio 😽</a>
+            <a href="#gatitos" class="buttoms">Gatitos 😼</a>
+            <a href="#contacto" class="buttoms">Contacto 😸</a>
         </nav>
         <section id="inicio">
             <h1 id = "titulo" >Los seres mas maravillosos del mundo: Los Gatitos :3</h1>
@@ -22,8 +22,7 @@
                     Cada raza de gato puede mostrar comportamientos únicos. Por ejemplo, los abisinios son activos y enérgicos, mientras que los persas y los escoceses suelen ser más relajados.
                     Los gatos siameses son conocidos por ser inteligentes y vocales, y suelen maullar en voz alta si se sienten ignorados.
                     <br><br>Los gatos mestizos generalmente se clasifican por la longitud de su pelaje, ya sea como domésticos de pelo corto o domésticos de pelo largo. Los gatos con pelo más largo necesitan 
-                    más aseo para evitar enredos. Algunas razas, como el devon rex, tienen un pelaje rizado y más corto debido a un cambio genético. Otros, como el sphynx, no tienen pelaje en absoluto.
-                    Los gatos envejecen mucho más rápido que las personas. El primer año de vida de un gato equivale a unos 18 años humanos. Después de eso, cada año del gato es de 3 a 5 años humanos.
+                    más aseo para evitar enredos. El primer año de vida de un gato equivale a unos 18 años humanos. Después de eso, cada año del gato es de 3 a 5 años humanos.
                     <br><br><strong>Algunos datos curiosos de los michis: </strong><br>- Los gatos tienen una excelente visión. Pueden ver más detalles que los perros, lo que les ayuda a calcular con precisión
                     la velocidad y la distancia. Esta es una habilidad importante para los cazadores. Con poca luz, los gatos ven 6 veces mejor que las personas, por lo que la gente suele decir que los gatos ven en la oscuridad.
                     <br>- Los gatos también tienen mejor audición que las personas e, incluso, que la mayoría de los perros. Los oídos les ayudan a localizar los sonidos, lo que es útil para cazar. Cuando oyen algo, los gatos suelen
@@ -33,12 +32,43 @@
             </div>
         </section>
         <section id="gatitos">
-            <h2>Galeria de Gatitos :3</h2>
+            <h1 id = "titulo">Galeria de Gatitos :3</h1>
             <div class="contenido2">
-                <img src="./gatito3.jpg" alt="Gatito 1" width="300" >
-                <img src="./gatito4.jpg" alt="Gatito 2" width="300">
-                <img src="./gatito5.jpg" alt="Gatito 3" width="300">
+            <div class="carrusel">
+                <button type="button" id="anterior" aria-label="Foto anterior">❮</button>
+
+                <img id="foto" src="./gatito3.jpg" alt="Gatito 1">
+
+                <button type="button" id="siguiente" aria-label="Foto siguiente">❯</button>
+            </div>
+            <script>
+            const fotos = [
+                { src: "./gatito3.jpg", alt: "Gatito 1" },
+                { src: "./gatito4.jpg", alt: "Gatito 2" },
+                { src: "./gatito5.jpg", alt: "Gatito 3" },
+                {src: "./gatito6.jpg", alt: "Gatito 4" },
+                { src: "./gatito7.jpg", alt: "Gatito 5" },
+                { src: "./gatito8.jpg", alt: "Gatito 6" }
+            ];
+            let indice = 0;
+            const imagen = document.getElementById("foto");
+            function cambiarFoto(paso) {
+                indice = (indice + paso + fotos.length) % fotos.length;
+                imagen.src = fotos[indice].src;
+                imagen.alt = fotos[indice].alt;
+            }
+            document.getElementById("anterior").addEventListener("click", () => {
+                cambiarFoto(-1);
+            });
+            document.getElementById("siguiente").addEventListener("click", () => {
+                cambiarFoto(1);
+            });
+            </script>
             </div>
         </section>
     </body>
+    <footer id="contacto">
+        <h2>Contacto</h2>
+       
+    </footer>
 </html>
